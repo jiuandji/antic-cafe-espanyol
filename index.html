@@ -1,0 +1,448 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Antic Cafè Espanyol · Paral·lel 64 · Barcelona · desde 1895</title>
+<meta name="description" content="El café con más historia del Paral·lel, desde 1895. Cocina catalana, paellas, carnes a la brasa, marisco y la mejor terraza de Barcelona. Reserva tu mesa online." />
+<meta name="theme-color" content="#141010" />
+<link rel="canonical" href="https://anticcafeespanyol.es/" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23141010'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='38' font-weight='700' fill='%23d4af37' text-anchor='middle'%3EA%3C/text%3E%3C/svg%3E" />
+<meta property="og:title" content="Antic Cafè Espanyol · desde 1895" />
+<meta property="og:description" content="La leyenda del Paral·lel. Cocina de mercado, paellas y la mejor terraza. Reserva online." />
+<meta property="og:type" content="restaurant" />
+<meta property="og:url" content="https://anticcafeespanyol.es/" />
+<meta property="og:locale" content="es_ES" />
+<meta property="og:image" content="https://anticcafeespanyol.es/assets/foto2.jpg" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Antic Cafè Espanyol · desde 1895" />
+<meta name="twitter:description" content="La leyenda del Paral·lel. Cocina de mercado, paellas y la mejor terraza. Reserva online." />
+<meta name="twitter:image" content="https://anticcafeespanyol.es/assets/foto2.jpg" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="image" href="assets/foto1.jpg" fetchpriority="high">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Restaurant","name":"Antic Cafè Espanyol","image":"assets/foto2.jpg","servesCuisine":["Catalan","Spanish","Mediterranean","Tapas"],"priceRange":"€€","foundingDate":"1895","telephone":"+34931060534","address":{"@type":"PostalAddress","streetAddress":"Avinguda del Paral·lel 64","postalCode":"08015","addressLocality":"Barcelona","addressCountry":"ES"},"servesCuisine":"Spanish","acceptsReservations":"True","aggregateRating":{"@type":"AggregateRating","ratingValue":"4.1","reviewCount":"2684"}}
+</script>
+<style>
+  :root{
+    --bg:#141010; --bg2:#1b1513; --card:#211a17; --line:#3a2c26;
+    --txt:#f4ece3; --mut:#b29b8c; --gold:#d4af37; --gold2:#e7c96b; --wine:#7b1e2b;
+    --maxw:1180px;
+    --disp:'Playfair Display',Georgia,serif; --body:'Inter',sans-serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--txt);font-family:var(--body);line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+  a{color:inherit;text-decoration:none}
+  h1,h2,h3{font-family:var(--disp);font-weight:700;line-height:1.1}
+  .gold{color:var(--gold)}
+  .label{font-family:var(--body);text-transform:uppercase;letter-spacing:.28em;font-size:12px;color:var(--gold);font-weight:600}
+  [data-rv]{opacity:0;transform:translateY(26px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.2,1)}
+  [data-rv].in{opacity:1;transform:none}
+  /* nav */
+  nav{position:fixed;top:0;left:0;right:0;z-index:80;transition:.35s;padding:18px 0}
+  nav.scrolled{background:rgba(20,16,16,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line);padding:12px 0}
+  nav .wrap{display:flex;align-items:center;justify-content:space-between}
+  .logo{font-family:var(--disp);font-weight:800;font-size:23px;letter-spacing:.01em}
+  .logo small{display:block;font-family:var(--body);font-size:9px;letter-spacing:.32em;color:var(--gold);text-transform:uppercase;font-weight:600;margin-top:1px}
+  .navlinks{display:flex;gap:26px;align-items:center}
+  .navlinks a{font-size:14px;color:var(--txt);font-weight:500;transition:.2s;opacity:.85}
+  .navlinks a:hover{color:var(--gold);opacity:1}
+  .lang{display:flex;gap:3px;border:1px solid var(--line);border-radius:30px;padding:3px}
+  .lang button{background:transparent;border:none;color:var(--mut);padding:5px 9px;border-radius:20px;cursor:pointer;font-weight:600;font-size:11px;font-family:var(--body);transition:.2s;text-transform:uppercase}
+  .lang button.on{background:var(--gold);color:#1a1410}
+  .burger{display:none;background:none;border:none;color:var(--txt);font-size:26px;cursor:pointer}
+  @media(max-width:880px){.navlinks .nl{display:none}.burger{display:block}}
+  @media(max-width:480px){.logo{font-size:18px}.logo small{font-size:8px;letter-spacing:.26em}.navlinks{gap:12px}.lang{padding:2px}.lang button{padding:4px 6px;font-size:10px}.stats{gap:18px;flex-wrap:wrap}}
+  /* hero */
+  .hero{position:relative;min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:120px 0 60px}
+  .hero .bg{position:absolute;inset:0;background:url(assets/foto1.jpg) center/cover;}
+  .hero .ov{position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,16,16,.62),rgba(20,16,16,.78))}
+  .hero .inner{position:relative;max-width:840px;padding:0 24px}
+  .hero h1{font-size:clamp(44px,8vw,92px);font-weight:800;margin:18px 0 0;letter-spacing:.01em}
+  .hero .tag{font-size:clamp(15px,2vw,18px)}
+  .hero .sub{color:#e9ddd2;font-size:clamp(16px,2.2vw,20px);margin:22px auto 0;max-width:600px;font-weight:300}
+  .divider{width:60px;height:2px;background:var(--gold);margin:26px auto 0}
+  .btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:34px}
+  .btn{display:inline-flex;align-items:center;gap:9px;font-family:var(--body);font-weight:600;font-size:15px;padding:15px 30px;border-radius:2px;transition:.2s;cursor:pointer;border:1px solid var(--gold)}
+  .btn.gold{background:var(--gold);color:#1a1410}
+  .btn.gold:hover{background:var(--gold2)}
+  .btn.ghost{background:transparent;color:var(--txt)}
+  .btn.ghost:hover{background:rgba(212,175,55,.12)}
+  /* sections */
+  section{padding:96px 0;position:relative}
+  .sec-head{text-align:center;max-width:680px;margin:0 auto 56px}
+  .sec-head h2{font-size:clamp(30px,4.6vw,48px);margin:14px 0 0}
+  .sec-head p{color:var(--mut);margin-top:16px;font-size:17px;font-weight:300}
+  /* history */
+  .hist{background:var(--bg2)}
+  .hist-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+  @media(max-width:860px){.hist-grid{grid-template-columns:1fr;gap:34px}}
+  .hist-grid img{width:100%;border-radius:4px;border:1px solid var(--line);box-shadow:0 30px 70px rgba(0,0,0,.45)}
+  .hist-txt h2{font-size:clamp(28px,4vw,42px)}
+  .hist-txt p{color:var(--mut);margin-top:18px;font-weight:300;font-size:16.5px}
+  .stats{display:flex;gap:30px;margin-top:32px}
+  .stat .n{font-family:var(--disp);font-size:38px;font-weight:800;color:var(--gold)}
+  .stat .l{font-size:12px;color:var(--mut);text-transform:uppercase;letter-spacing:.12em}
+  /* menu */
+  .tabs{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-bottom:42px}
+  .tabs button{background:transparent;border:1px solid var(--line);color:var(--mut);padding:11px 20px;border-radius:30px;cursor:pointer;font-family:var(--body);font-weight:600;font-size:14px;transition:.2s}
+  .tabs button.on{background:var(--gold);color:#1a1410;border-color:var(--gold)}
+  .menu-list{max-width:780px;margin:0 auto;display:none}
+  .menu-list.on{display:block}
+  .mi{display:flex;justify-content:space-between;gap:20px;padding:18px 0;border-bottom:1px dashed var(--line);align-items:baseline}
+  .mi .nm{font-family:var(--disp);font-size:20px;font-weight:600}
+  .mi .ds{color:var(--mut);font-size:13.5px;font-weight:300;margin-top:3px}
+  .mi .pr{font-family:var(--disp);font-size:19px;color:var(--gold);white-space:nowrap;font-weight:700}
+  .menudia{max-width:780px;margin:40px auto 0;background:var(--card);border:1px solid var(--gold);border-radius:6px;padding:26px 30px;display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+  .menudia .t{font-family:var(--disp);font-size:24px;font-weight:700}
+  .menudia .d{color:var(--mut);font-size:14px;margin-top:4px}
+  .menudia .p{font-family:var(--disp);font-size:40px;color:var(--gold);font-weight:800}
+  /* gallery */
+  .gal{background:var(--bg2)}
+  .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+  @media(max-width:860px){.grid{grid-template-columns:repeat(2,1fr)}}
+  .grid .g{position:relative;overflow:hidden;border-radius:4px;cursor:pointer;aspect-ratio:1;background:#000}
+  .grid .g img{width:100%;height:100%;object-fit:cover;transition:.5s}
+  .grid .g:hover img{transform:scale(1.07)}
+  .grid .tall{grid-row:span 2;aspect-ratio:auto}
+  /* terraza */
+  .terr{position:relative;text-align:center;padding:120px 0}
+  .terr .bg{position:absolute;inset:0;background:url(assets/foto1.jpg) center/cover;}
+  .terr .ov{position:absolute;inset:0;background:rgba(20,16,16,.74)}
+  .terr .inner{position:relative;max-width:680px;margin:0 auto;padding:0 24px}
+  .terr h2{font-size:clamp(30px,5vw,52px);margin-top:14px}
+  .terr p{color:#e9ddd2;margin-top:18px;font-weight:300;font-size:18px}
+  /* reserve */
+  .res-grid{display:grid;grid-template-columns:1fr 1fr;gap:46px}
+  @media(max-width:860px){.res-grid{grid-template-columns:1fr;gap:32px}}
+  .res-actions{display:flex;flex-direction:column;gap:14px}
+  .ra{display:flex;align-items:center;gap:16px;background:var(--card);border:1px solid var(--line);border-radius:6px;padding:18px 20px;transition:.2s}
+  .ra:hover{border-color:var(--gold);transform:translateY(-2px)}
+  .ra .ic{font-size:26px}
+  .ra b{font-family:var(--disp);font-size:17px;display:block}
+  .ra span{color:var(--mut);font-size:13px}
+  form{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:28px}
+  form h3{font-size:22px;margin-bottom:18px}
+  .frow{display:flex;gap:12px;margin-bottom:12px}
+  .frow>*{flex:1}
+  input,select{width:100%;background:var(--bg);border:1px solid var(--line);border-radius:4px;padding:13px 14px;color:var(--txt);font-family:var(--body);font-size:14px;outline:none}
+  input:focus,select:focus{border-color:var(--gold)}
+  form .btn{width:100%;justify-content:center;margin-top:6px}
+  .hours{margin-top:22px}
+  .hours .h{display:flex;justify-content:space-between;padding:7px 0;border-bottom:1px solid var(--line);font-size:14px}
+  .hours .h.cl span:last-child{color:#c97}
+  /* contact */
+  .con{background:var(--bg2)}
+  .con-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:stretch}
+  @media(max-width:860px){.con-grid{grid-template-columns:1fr}}
+  .con-info div{margin-bottom:22px}
+  .con-info .label{margin-bottom:6px}
+  .con-info p{font-size:16px}
+  .map{min-height:320px;border-radius:8px;overflow:hidden;border:1px solid var(--line)}
+  .map iframe{width:100%;height:100%;min-height:320px;border:0;filter:grayscale(.3) contrast(1.05)}
+  footer{text-align:center;padding:46px 0;border-top:1px solid var(--line)}
+  footer .logo{justify-content:center;margin-bottom:10px}
+  footer p{color:var(--mut);font-size:13px;margin-top:6px}
+  /* lightbox */
+  #lb{position:fixed;inset:0;background:rgba(10,7,7,.94);z-index:120;display:none;align-items:center;justify-content:center;padding:30px;cursor:zoom-out}
+  #lb.on{display:flex}
+  #lb img{max-width:92%;max-height:92%;border-radius:6px;box-shadow:0 30px 90px rgba(0,0,0,.6)}
+  /* mobile menu */
+  #mm{position:fixed;inset:0;background:rgba(20,16,16,.98);z-index:90;display:none;flex-direction:column;align-items:center;justify-content:center;gap:26px}
+  #mm.on{display:flex}
+  #mm a{font-family:var(--disp);font-size:26px}
+  #mm .cl{position:absolute;top:24px;right:26px;font-size:34px;background:none;border:none;color:var(--txt);cursor:pointer}
+  /* prevent grid/flex blowout on narrow screens */
+  .res-grid>*,.hist-grid>*,.con-grid>*,.frow>*,.ra>div{min-width:0}
+  .ra span{overflow-wrap:anywhere}
+  /* a11y */
+  .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+  a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,.g:focus-visible{outline:2px solid var(--gold2);outline-offset:3px;border-radius:3px}
+  :focus:not(:focus-visible){outline:none}
+  /* today's hours */
+  .hours .h.today{background:rgba(212,175,55,.09);padding-left:10px;padding-right:10px;border-radius:5px}
+  .hours .h.today span:first-child{color:var(--gold);font-weight:600}
+  .hours .h.today span:first-child::after{content:"•";margin-left:7px;color:var(--gold)}
+  @media(prefers-reduced-motion:reduce){[data-rv]{opacity:1;transform:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<nav id="nav"><div class="wrap">
+  <div class="logo">Antic Cafè Espanyol<small data-i18n="logo_sub">Paral·lel · desde 1895</small></div>
+  <div class="navlinks">
+    <a class="nl" href="#historia" data-i18n="nav_history">Historia</a>
+    <a class="nl" href="#carta" data-i18n="nav_menu">Carta</a>
+    <a class="nl" href="#galeria" data-i18n="nav_gallery">Galería</a>
+    <a class="nl" href="#reservar" data-i18n="nav_reserve">Reservar</a>
+    <a class="nl" href="#contacto" data-i18n="nav_contact">Contacto</a>
+    <div class="lang" id="lang" role="group" aria-label="Idioma / Language"></div>
+    <button class="burger" aria-label="Menú" aria-controls="mm" onclick="document.getElementById('mm').classList.add('on')"><span aria-hidden="true">☰</span></button>
+  </div>
+</div></nav>
+
+<div id="mm" role="dialog" aria-modal="true" aria-label="Menú de navegación">
+  <button class="cl" aria-label="Cerrar" onclick="document.getElementById('mm').classList.remove('on')"><span aria-hidden="true">×</span></button>
+  <a href="#historia" onclick="mmc()" data-i18n="nav_history">Historia</a>
+  <a href="#carta" onclick="mmc()" data-i18n="nav_menu">Carta</a>
+  <a href="#galeria" onclick="mmc()" data-i18n="nav_gallery">Galería</a>
+  <a href="#reservar" onclick="mmc()" data-i18n="nav_reserve">Reservar</a>
+  <a href="#contacto" onclick="mmc()" data-i18n="nav_contact">Contacto</a>
+</div>
+
+<header class="hero">
+  <div class="bg"></div><div class="ov"></div>
+  <div class="inner">
+    <div class="label" data-i18n="hero_tag">El café con más historia del Paral·lel · desde 1895</div>
+    <h1>Antic Cafè Espanyol</h1>
+    <div class="divider"></div>
+    <p class="sub" data-i18n="hero_sub">Cocina de mercado, paellas, carnes a la brasa y la mejor terraza de Barcelona. Una leyenda viva del Paral·lel.</p>
+    <div class="btns">
+      <a class="btn gold" href="#reservar" data-i18n="hero_cta1">Reservar mesa</a>
+      <a class="btn ghost" href="#carta" data-i18n="hero_cta2">Ver la carta</a>
+    </div>
+  </div>
+</header>
+
+<section id="historia" class="hist"><div class="wrap hist-grid">
+  <div class="hist-txt" data-rv>
+    <div class="label" data-i18n="hist_eye">Nuestra historia</div>
+    <h2 data-i18n="hist_title">130 años en el corazón del Paral·lel</h2>
+    <p data-i18n="hist_p1">Desde 1895 somos el café con más historia de la avenida. Punto de encuentro de artistas, vecinos y viajeros — territorio neutral donde solo se pide respeto y buena mesa.</p>
+    <p data-i18n="hist_p2">Hoy mantenemos los clásicos de siempre: cocina catalana de mercado, el aroma del horno de carbón y la terraza más emblemática del Paral·lel.</p>
+    <div class="stats">
+      <div class="stat"><div class="n">1895</div><div class="l" data-i18n="stat_since">Desde</div></div>
+      <div class="stat"><div class="n">130+</div><div class="l" data-i18n="stat_years">Años de historia</div></div>
+      <div class="stat"><div class="n">4.1★</div><div class="l" data-i18n="stat_reviews">2.684 reseñas</div></div>
+    </div>
+  </div>
+  <div data-rv><img src="assets/foto2.jpg" alt="Carta histórica y cava del Antic Cafè Espanyol" width="1730" height="973" loading="lazy" decoding="async"></div>
+</div></section>
+
+<section id="carta"><div class="wrap">
+  <div class="sec-head" data-rv>
+    <div class="label" data-i18n="menu_eye">La carta</div>
+    <h2 data-i18n="menu_title">Cocina de mercado, sabor de siempre</h2>
+    <p data-i18n="menu_sub">Tapas, arroces, brasa y producto fresco seleccionado cada día.</p>
+  </div>
+  <div class="tabs" id="tabs" data-rv></div>
+  <div id="menus" data-rv></div>
+  <div class="menudia" data-rv>
+    <div><div class="t" data-i18n="menudia_t">Menú del día</div><div class="d" data-i18n="menudia_d">Entrante + principal + postre + bebida · de lunes a viernes al mediodía</div></div>
+    <div class="p">14,90&nbsp;€</div>
+  </div>
+</div></section>
+
+<section id="galeria" class="gal"><div class="wrap">
+  <div class="sec-head" data-rv>
+    <div class="label" data-i18n="gal_eye">Galería</div>
+    <h2 data-i18n="gal_title">De la brasa a la mesa</h2>
+  </div>
+  <div class="grid" data-rv>
+    <div class="g tall" tabindex="0" role="button" aria-label="Ampliar: Chuletón a la brasa" onclick="lb(this)"><img src="assets/foto7.jpg" alt="Chuletón a la brasa" width="1460" height="973" loading="lazy" decoding="async"></div>
+    <div class="g" tabindex="0" role="button" aria-label="Ampliar: Tortilla española" onclick="lb(this)"><img src="assets/foto3.jpg" alt="Tortilla española" width="1460" height="973" loading="lazy" decoding="async"></div>
+    <div class="g" tabindex="0" role="button" aria-label="Ampliar: Marisco fresco" onclick="lb(this)"><img src="assets/foto5.jpg" alt="Marisco fresco" width="1460" height="973" loading="lazy" decoding="async"></div>
+    <div class="g" tabindex="0" role="button" aria-label="Ampliar: Tapas" onclick="lb(this)"><img src="assets/foto6.jpg" alt="Tapas" width="1460" height="973" loading="lazy" decoding="async"></div>
+    <div class="g" tabindex="0" role="button" aria-label="Ampliar: Pescado a la brasa" onclick="lb(this)"><img src="assets/foto8.jpg" alt="Pescado a la brasa" width="1460" height="973" loading="lazy" decoding="async"></div>
+    <div class="g" tabindex="0" role="button" aria-label="Ampliar: Plato de la casa" onclick="lb(this)"><img src="assets/foto4.jpg" alt="Plato de la casa" width="1460" height="973" loading="lazy" decoding="async"></div>
+    <div class="g" tabindex="0" role="button" aria-label="Ampliar: Interior" onclick="lb(this)"><img src="assets/foto1.jpg" alt="Interior" width="1460" height="973" loading="lazy" decoding="async"></div>
+  </div>
+</div></section>
+
+<section class="terr">
+  <div class="bg"></div><div class="ov"></div>
+  <div class="inner" data-rv>
+    <div class="label" data-i18n="ter_eye">La terraza</div>
+    <h2 data-i18n="ter_title">La mejor terraza del Paral·lel</h2>
+    <p data-i18n="ter_p">Cañas, vermut y buena mesa al aire libre, en plena avenida. El sitio donde Barcelona se sienta a mirar pasar la vida desde hace más de un siglo.</p>
+  </div>
+</section>
+
+<section id="reservar"><div class="wrap">
+  <div class="sec-head" data-rv>
+    <div class="label" data-i18n="res_eye">Reservas</div>
+    <h2 data-i18n="res_title">Reserva tu mesa</h2>
+    <p data-i18n="res_sub">Online, por teléfono o por WhatsApp — como prefieras.</p>
+  </div>
+  <div class="res-grid">
+    <div class="res-actions" data-rv>
+      <a class="ra" href="tel:+34931060534"><span class="ic">📞</span><div><b data-i18n="ra_call">Llamar</b><span>+34 931 06 05 34</span></div></a>
+      <a class="ra" href="https://wa.me/34692248271?text=Hola%2C%20quiero%20reservar%20una%20mesa%20en%20Antic%20Caf%C3%A8%20Espanyol" target="_blank" rel="noopener"><span class="ic">💬</span><div><b>WhatsApp</b><span data-i18n="ra_wa">Reserva al instante</span></div></a>
+      <a class="ra" href="#reservar" id="onlineBtn"><span class="ic">🍽️</span><div><b data-i18n="ra_online">Reserva online</b><span data-i18n="ra_online_s">Mesa en 30 segundos</span></div></a>
+      <div class="hours" id="hours"></div>
+    </div>
+    <form data-rv onsubmit="return resv(event)" novalidate>
+      <h3 data-i18n="form_title">Solicitar reserva</h3>
+      <label class="sr-only" for="f_name" data-i18n="form_name">Nombre y apellidos</label>
+      <input id="f_name" required autocomplete="name" data-i18n-ph="form_name" placeholder="Nombre y apellidos">
+      <div class="frow">
+        <label class="sr-only" for="f_date" data-i18n="form_date">Fecha</label>
+        <input id="f_date" type="date" required>
+        <label class="sr-only" for="f_time" data-i18n="form_time">Hora</label>
+        <input id="f_time" type="time" required value="21:00">
+      </div>
+      <div class="frow">
+        <label class="sr-only" for="f_ppl" data-i18n="form_ppl">Comensales</label>
+        <select id="f_ppl"><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="8">8+</option></select>
+        <label class="sr-only" for="f_phone" data-i18n="form_phone">Teléfono</label>
+        <input id="f_phone" type="tel" inputmode="tel" autocomplete="tel" data-i18n-ph="form_phone" placeholder="Teléfono">
+      </div>
+      <button class="btn gold" type="submit" data-i18n="form_submit">Enviar por WhatsApp</button>
+    </form>
+  </div>
+</div></section>
+
+<section id="contacto" class="con"><div class="wrap con-grid">
+  <div class="con-info" data-rv>
+    <div class="label" data-i18n="con_eye">Contacto</div>
+    <h2 style="font-size:34px;margin:12px 0 26px">Antic Cafè Espanyol</h2>
+    <div><div class="label" data-i18n="con_addr">Dirección</div><p>Avinguda del Paral·lel, 64<br>08015 Barcelona</p></div>
+    <div><div class="label" data-i18n="con_phone">Teléfono</div><p>+34 931 06 05 34 · +34 692 248 271</p></div>
+    <div><div class="label" data-i18n="con_hours">Horario</div><p id="hours2"></p></div>
+  </div>
+  <div class="map" data-rv>
+    <iframe loading="lazy" src="https://www.google.com/maps?q=Avinguda+del+Paral%C2%B7lel+64+Barcelona&output=embed"></iframe>
+  </div>
+</div></section>
+
+<footer><div class="wrap">
+  <div class="logo">Antic Cafè Espanyol<small>Paral·lel 64 · Barcelona</small></div>
+  <p data-i18n="foot_t">El café con más historia del Paral·lel · desde 1895</p>
+  <p style="opacity:.6">© 2026 Antic Cafè Espanyol</p>
+</div></footer>
+
+<div id="lb" role="dialog" aria-modal="true" aria-label="Galería" onclick="this.classList.remove('on')"><img id="lbimg" src="" alt=""></div>
+
+<script>
+/* ===== i18n (5 idiomas) ===== */
+const T={
+ es:{logo_sub:"Paral·lel · desde 1895",nav_history:"Historia",nav_menu:"Carta",nav_gallery:"Galería",nav_reserve:"Reservar",nav_contact:"Contacto",
+  hero_tag:"El café con más historia del Paral·lel · desde 1895",hero_sub:"Cocina de mercado, paellas, carnes a la brasa y la mejor terraza de Barcelona. Una leyenda viva del Paral·lel.",hero_cta1:"Reservar mesa",hero_cta2:"Ver la carta",
+  hist_eye:"Nuestra historia",hist_title:"130 años en el corazón del Paral·lel",hist_p1:"Desde 1895 somos el café con más historia de la avenida. Punto de encuentro de artistas, vecinos y viajeros — territorio neutral donde solo se pide respeto y buena mesa.",hist_p2:"Hoy mantenemos los clásicos de siempre: cocina catalana de mercado, el aroma del horno de carbón y la terraza más emblemática del Paral·lel.",stat_since:"Desde",stat_years:"Años de historia",stat_reviews:"2.684 reseñas",
+  menu_eye:"La carta",menu_title:"Cocina de mercado, sabor de siempre",menu_sub:"Tapas, arroces, brasa y producto fresco seleccionado cada día.",menudia_t:"Menú del día",menudia_d:"Entrante + principal + postre + bebida · de lunes a viernes al mediodía",
+  gal_eye:"Galería",gal_title:"De la brasa a la mesa",
+  ter_eye:"La terraza",ter_title:"La mejor terraza del Paral·lel",ter_p:"Cañas, vermut y buena mesa al aire libre, en plena avenida. El sitio donde Barcelona se sienta a ver pasar la vida desde hace más de un siglo.",
+  res_eye:"Reservas",res_title:"Reserva tu mesa",res_sub:"Online, por teléfono o por WhatsApp — como prefieras.",ra_call:"Llamar",ra_wa:"Reserva al instante",ra_online:"Reserva online",ra_online_s:"Mesa en 30 segundos",
+  form_title:"Solicitar reserva",form_name:"Nombre y apellidos",form_phone:"Teléfono",form_date:"Fecha",form_time:"Hora",form_ppl:"Comensales",form_submit:"Enviar por WhatsApp",
+  con_eye:"Contacto",con_addr:"Dirección",con_phone:"Teléfono",con_hours:"Horario",foot_t:"El café con más historia del Paral·lel · desde 1895",
+  cat:["Tapas","Marisco","Arroces","A la brasa","Pescados"],closed:"Cerrado",
+  days:["Lunes","Martes","Miércoles","Jueves","Viernes","Sábado","Domingo"]},
+ ca:{logo_sub:"Paral·lel · des de 1895",nav_history:"Història",nav_menu:"Carta",nav_gallery:"Galeria",nav_reserve:"Reservar",nav_contact:"Contacte",
+  hero_tag:"El cafè amb més història del Paral·lel · des de 1895",hero_sub:"Cuina de mercat, paelles, carns a la brasa i la millor terrassa de Barcelona. Una llegenda viva del Paral·lel.",hero_cta1:"Reservar taula",hero_cta2:"Veure la carta",
+  hist_eye:"La nostra història",hist_title:"130 anys al cor del Paral·lel",hist_p1:"Des de 1895 som el cafè amb més història de l'avinguda. Punt de trobada d'artistes, veïns i viatgers — territori neutral on només es demana respecte i bona taula.",hist_p2:"Avui mantenim els clàssics de sempre: cuina catalana de mercat, l'aroma del forn de carbó i la terrassa més emblemàtica del Paral·lel.",stat_since:"Des de",stat_years:"Anys d'història",stat_reviews:"2.684 ressenyes",
+  menu_eye:"La carta",menu_title:"Cuina de mercat, sabor de sempre",menu_sub:"Tapes, arrossos, brasa i producte fresc seleccionat cada dia.",menudia_t:"Menú del dia",menudia_d:"Entrant + principal + postres + beguda · de dilluns a divendres al migdia",
+  gal_eye:"Galeria",gal_title:"De la brasa a la taula",
+  ter_eye:"La terrassa",ter_title:"La millor terrassa del Paral·lel",ter_p:"Canyes, vermut i bona taula a l'aire lliure, en plena avinguda. El lloc on Barcelona seu a veure passar la vida des de fa més d'un segle.",
+  res_eye:"Reserves",res_title:"Reserva la teva taula",res_sub:"Online, per telèfon o per WhatsApp — com prefereixis.",ra_call:"Trucar",ra_wa:"Reserva a l'instant",ra_online:"Reserva online",ra_online_s:"Taula en 30 segons",
+  form_title:"Sol·licitar reserva",form_name:"Nom i cognoms",form_phone:"Telèfon",form_date:"Data",form_time:"Hora",form_ppl:"Comensals",form_submit:"Enviar per WhatsApp",
+  con_eye:"Contacte",con_addr:"Adreça",con_phone:"Telèfon",con_hours:"Horari",foot_t:"El cafè amb més història del Paral·lel · des de 1895",
+  cat:["Tapes","Marisc","Arrossos","A la brasa","Peixos"],closed:"Tancat",
+  days:["Dilluns","Dimarts","Dimecres","Dijous","Divendres","Dissabte","Diumenge"]},
+ en:{logo_sub:"Paral·lel · since 1895",nav_history:"History",nav_menu:"Menu",nav_gallery:"Gallery",nav_reserve:"Book",nav_contact:"Contact",
+  hero_tag:"The most storied café on the Paral·lel · since 1895",hero_sub:"Market cuisine, paellas, charcoal-grilled meats and the best terrace in Barcelona. A living legend of the Paral·lel.",hero_cta1:"Book a table",hero_cta2:"View the menu",
+  hist_eye:"Our history",hist_title:"130 years in the heart of the Paral·lel",hist_p1:"Since 1895 we have been the most storied café on the avenue. A meeting point for artists, neighbours and travellers — neutral ground where all we ask for is respect and a good meal.",hist_p2:"Today we keep the timeless classics: Catalan market cuisine, the aroma of the charcoal oven, and the most iconic terrace on the Paral·lel.",stat_since:"Since",stat_years:"Years of history",stat_reviews:"2,684 reviews",
+  menu_eye:"The menu",menu_title:"Market cuisine, timeless flavour",menu_sub:"Tapas, rice dishes, grill and fresh produce selected daily.",menudia_t:"Menu of the day",menudia_d:"Starter + main + dessert + drink · Monday to Friday at lunch",
+  gal_eye:"Gallery",gal_title:"From the grill to your table",
+  ter_eye:"The terrace",ter_title:"The best terrace on the Paral·lel",ter_p:"Beers, vermouth and good food in the open air, right on the avenue. Where Barcelona has sat and watched life go by for over a century.",
+  res_eye:"Reservations",res_title:"Book your table",res_sub:"Online, by phone or via WhatsApp — whatever you prefer.",ra_call:"Call",ra_wa:"Book instantly",ra_online:"Book online",ra_online_s:"A table in 30 seconds",
+  form_title:"Request a booking",form_name:"Full name",form_phone:"Phone",form_date:"Date",form_time:"Time",form_ppl:"Guests",form_submit:"Send via WhatsApp",
+  con_eye:"Contact",con_addr:"Address",con_phone:"Phone",con_hours:"Opening hours",foot_t:"The most storied café on the Paral·lel · since 1895",
+  cat:["Tapas","Seafood","Rice & Paella","From the grill","Fish"],closed:"Closed",
+  days:["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"]},
+ fr:{logo_sub:"Paral·lel · depuis 1895",nav_history:"Histoire",nav_menu:"Carte",nav_gallery:"Galerie",nav_reserve:"Réserver",nav_contact:"Contact",
+  hero_tag:"Le café le plus emblématique du Paral·lel · depuis 1895",hero_sub:"Cuisine de marché, paellas, viandes grillées à la braise et la plus belle terrasse de Barcelone. Une légende vivante du Paral·lel.",hero_cta1:"Réserver une table",hero_cta2:"Voir la carte",
+  hist_eye:"Notre histoire",hist_title:"130 ans au cœur du Paral·lel",hist_p1:"Depuis 1895, nous sommes le café le plus chargé d'histoire de l'avenue. Lieu de rencontre des artistes, des voisins et des voyageurs — un terrain neutre où l'on ne demande que respect et bonne table.",hist_p2:"Aujourd'hui nous gardons les classiques de toujours : cuisine catalane de marché, l'arôme du four à charbon et la terrasse la plus emblématique du Paral·lel.",stat_since:"Depuis",stat_years:"Ans d'histoire",stat_reviews:"2 684 avis",
+  menu_eye:"La carte",menu_title:"Cuisine de marché, saveur d'antan",menu_sub:"Tapas, riz, grillades et produits frais sélectionnés chaque jour.",menudia_t:"Menu du jour",menudia_d:"Entrée + plat + dessert + boisson · du lundi au vendredi le midi",
+  gal_eye:"Galerie",gal_title:"De la braise à la table",
+  ter_eye:"La terrasse",ter_title:"La plus belle terrasse du Paral·lel",ter_p:"Bières, vermouth et bonne table en plein air, sur l'avenue. Là où Barcelone s'assoit pour regarder la vie passer depuis plus d'un siècle.",
+  res_eye:"Réservations",res_title:"Réservez votre table",res_sub:"En ligne, par téléphone ou via WhatsApp — comme vous préférez.",ra_call:"Appeler",ra_wa:"Réservez en un instant",ra_online:"Réserver en ligne",ra_online_s:"Une table en 30 secondes",
+  form_title:"Demander une réservation",form_name:"Nom et prénom",form_phone:"Téléphone",form_date:"Date",form_time:"Heure",form_ppl:"Convives",form_submit:"Envoyer par WhatsApp",
+  con_eye:"Contact",con_addr:"Adresse",con_phone:"Téléphone",con_hours:"Horaires",foot_t:"Le café le plus emblématique du Paral·lel · depuis 1895",
+  cat:["Tapas","Fruits de mer","Riz & Paella","À la braise","Poissons"],closed:"Fermé",
+  days:["Lundi","Mardi","Mercredi","Jeudi","Vendredi","Samedi","Dimanche"]},
+ ru:{logo_sub:"Paral·lel · с 1895",nav_history:"История",nav_menu:"Меню",nav_gallery:"Галерея",nav_reserve:"Бронь",nav_contact:"Контакты",
+  hero_tag:"Кафе с самой длинной историей на Параллель · с 1895",hero_sub:"Рыночная кухня, паэльи, мясо на углях и лучшая терраса Барселоны. Живая легенда Параллель.",hero_cta1:"Забронировать стол",hero_cta2:"Смотреть меню",
+  hist_eye:"Наша история",hist_title:"130 лет в сердце Параллель",hist_p1:"С 1895 года мы — кафе с самой длинной историей на проспекте. Место встреч артистов, соседей и путешественников — нейтральная территория, где просят лишь уважение и хороший стол.",hist_p2:"Сегодня мы храним классику: каталонскую рыночную кухню, аромат угольной печи и самую знаменитую террасу Параллель.",stat_since:"С",stat_years:"Лет истории",stat_reviews:"2 684 отзыва",
+  menu_eye:"Меню",menu_title:"Рыночная кухня, вкус как всегда",menu_sub:"Тапас, рис, гриль и свежие продукты, отобранные каждый день.",menudia_t:"Меню дня",menudia_d:"Закуска + горячее + десерт + напиток · пн–пт в обед",
+  gal_eye:"Галерея",gal_title:"С углей — на стол",
+  ter_eye:"Терраса",ter_title:"Лучшая терраса Параллель",ter_p:"Пиво, вермут и хороший стол на свежем воздухе, прямо на проспекте. Здесь Барселона уже более века сидит и смотрит, как идёт жизнь.",
+  res_eye:"Бронирование",res_title:"Забронируйте стол",res_sub:"Онлайн, по телефону или в WhatsApp — как удобнее.",ra_call:"Позвонить",ra_wa:"Бронь мгновенно",ra_online:"Бронь онлайн",ra_online_s:"Стол за 30 секунд",
+  form_title:"Запрос на бронь",form_name:"Имя и фамилия",form_phone:"Телефон",form_date:"Дата",form_time:"Время",form_ppl:"Гостей",form_submit:"Отправить в WhatsApp",
+  con_eye:"Контакты",con_addr:"Адрес",con_phone:"Телефон",con_hours:"Часы работы",foot_t:"Кафе с самой длинной историей на Параллель · с 1895",
+  cat:["Тапас","Морепродукты","Рис и паэлья","На углях","Рыба"],closed:"Закрыто",
+  days:["Понедельник","Вторник","Среда","Четверг","Пятница","Суббота","Воскресенье"]}
+};
+
+/* меню — названия блюд универсальны, цены едины */
+const MENU=[
+ [["Patatas bravas","6,50"],["Croquetas caseras de jamón","8,00"],["Tortilla española","7,00"],["Pan con tomate","4,50"],["Pimientos de Padrón","7,50"],["Calamares a la andaluza","12,00"]],
+ [["Gambas a la plancha","16,00"],["Navajas a la plancha","14,00"],["Pulpo a la gallega","18,00"],["Jamón ibérico","22,00"],["Mejillones al vapor","11,00"]],
+ [["Paella de marisco (mín. 2)","19,50"],["Arroz negro","18,00"],["Fideuá","17,50"],["Arroz de bogavante","26,00"]],
+ [["Chuletón de ternera (kg)","48,00"],["Entrecot a la brasa","22,00"],["Secreto ibérico","18,00"],["Costillas de cordero","21,00"]],
+ [["Lubina a la espalda","21,00"],["Dorada a la sal","19,00"],["Trucha a la brasa","16,00"],["Bacalao al horno","20,00"]]
+];
+
+let LANG="es";
+function setLang(l){
+ LANG=l; const t=T[l];
+ document.documentElement.lang=l;
+ document.querySelectorAll("[data-i18n]").forEach(function(e){var k=e.getAttribute("data-i18n");if(t[k]!=null)e.textContent=t[k];});
+ document.querySelectorAll("[data-i18n-ph]").forEach(function(e){var k=e.getAttribute("data-i18n-ph");if(t[k]!=null)e.placeholder=t[k];});
+ document.querySelectorAll("#lang button").forEach(function(b){b.classList.toggle("on",b.dataset.l===l);});
+ buildTabs(); buildHours();
+ try{localStorage.setItem("ace_lang",l);}catch(e){}
+}
+function buildTabs(){
+ const tabs=document.getElementById("tabs"),box=document.getElementById("menus"),cat=T[LANG].cat;
+ tabs.innerHTML="";box.innerHTML="";
+ cat.forEach(function(c,i){
+  var b=document.createElement("button");b.textContent=c;b.className=i===0?"on":"";
+  b.onclick=function(){document.querySelectorAll("#tabs button").forEach(x=>x.classList.remove("on"));b.classList.add("on");document.querySelectorAll(".menu-list").forEach(x=>x.classList.remove("on"));document.getElementById("ml"+i).classList.add("on");};
+  tabs.appendChild(b);
+  var list=document.createElement("div");list.className="menu-list"+(i===0?" on":"");list.id="ml"+i;
+  MENU[i].forEach(function(d){list.innerHTML+='<div class="mi"><div class="nm">'+d[0]+'</div><div class="pr">'+d[1]+'&nbsp;€</div></div>';});
+  box.appendChild(list);
+ });
+}
+const HRS=[[0,"10:00–18:00"],[1,null],[2,"10:00–23:00"],[3,"10:00–24:00"],[4,"10:00–24:00"],[5,"10:00–24:00"],[6,"10:00–23:00"]];
+function buildHours(){
+ const t=T[LANG];let h="",h2=[];
+ var today=(new Date().getDay()+6)%7; // 0 = Lunes
+ HRS.forEach(function(r){var d=t.days[r[0]];var v=r[1]||t.closed;var cl=r[1]?"":" cl";if(r[0]===today)cl+=" today";h+='<div class="h'+cl+'"><span>'+d+'</span><span>'+v+'</span></div>';h2.push(d.slice(0,2)+" "+v);});
+ document.getElementById("hours").innerHTML=h;
+ document.getElementById("hours2").innerHTML=h2.join("<br>");
+}
+function lb(el){var im=el.querySelector("img");var b=document.getElementById("lbimg");b.src=im.src;b.alt=im.alt||"";document.getElementById("lb").classList.add("on");}
+function mmc(){document.getElementById("mm").classList.remove("on");}
+function resv(e){
+ e.preventDefault();
+ var n=f_name.value,d=f_date.value,ti=f_time.value,p=f_ppl.value,ph=f_phone.value;
+ var lbls={es:"Reserva",ca:"Reserva",en:"Booking",fr:"Réservation",ru:"Бронь"};
+ var msg=lbls[LANG]+" Antic Cafè Espanyol%0A"+n+" · "+p+" pax%0A"+d+" "+ti+(ph?("%0A"+ph):"");
+ window.open("https://wa.me/34692248271?text="+msg,"_blank","noopener");
+ return false;
+}
+/* lang buttons */
+(function(){
+ var L=["es","ca","en","fr","ru"],box=document.getElementById("lang");
+ L.forEach(function(l){var b=document.createElement("button");b.textContent=l.toUpperCase();b.dataset.l=l;b.onclick=function(){setLang(l);};box.appendChild(b);});
+ var saved="es";try{var s=localStorage.getItem("ace_lang");if(s&&T[s])saved=s;}catch(e){}
+ setLang(saved);
+})();
+/* nav scroll */
+addEventListener("scroll",function(){document.getElementById("nav").classList.toggle("scrolled",scrollY>40);},{passive:true});
+/* reveal */
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target);}});},{threshold:.12});
+document.querySelectorAll("[data-rv]").forEach(function(n){io.observe(n);});
+/* close overlays with Escape */
+addEventListener("keydown",function(e){if(e.key==="Escape"){document.getElementById("lb").classList.remove("on");document.getElementById("mm").classList.remove("on");}});
+/* gallery keyboard activation */
+document.querySelectorAll(".g").forEach(function(g){g.addEventListener("keydown",function(e){if(e.key==="Enter"||e.key===" "){e.preventDefault();lb(g);}});});
+/* default & minimum date = today */
+(function(){var d=new Date(Date.now()-new Date().getTimezoneOffset()*60000).toISOString().slice(0,10);var fd=document.getElementById("f_date");fd.value=d;fd.min=d;})();
+</script>
+</body>
+</html>
